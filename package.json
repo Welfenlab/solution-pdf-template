@@ -1,5 +1,5 @@
 {
-  "name": "@tutor/solution-pdf-template",
+  "name": "@tutor/pdf-template",
   "version": "1.0.0",
   "description": "The template used for PDF generation of solutions and corrected solutions.",
   "main": "./src/index.js",
