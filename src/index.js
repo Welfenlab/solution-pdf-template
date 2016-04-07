@@ -5,7 +5,9 @@ var templateFile = path.join(__dirname, 'template', 'template.html');
 
 var template = fs.readFileSync(templateFile, 'utf-8');
 var templateDirectory = path.resolve(path.dirname(templateFile));
-template = template.replace(/{dir}/g, templateDirectory);
+template = template
+	.replace(/{dir}/g, templateDirectory)
+	.replace(/{mathjax}/g, path.join(path.dirname(require.resolve('mathjax')), 'unpacked', 'MathJax.js'));
 
 module.exports = function(variables) {
 	return template
