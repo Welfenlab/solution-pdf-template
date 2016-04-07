@@ -32,10 +32,13 @@ window.renderMarkdown = function(markdownBase64) {
 };
 
 function createSvg(shapes, page) {
-    var ctx = new SvgCanvas();
+    //TODO make magic numbers more plausible
+    var ctx = new SvgCanvas(1190.56, 1683.78); //magic numbers from PDF.js for 2x zoomed A4 paper
     Scribble.drawShapesOn(ctx, shapes);
     return $(ctx.getSvg()).css({
-      'top': (page * 29.7) + 'cm'
+      'top': (page * 29.7) + 'cm',
+      'transform': 'scale(' + (560 / 1119.56) + ')', //don't ask me why it's 560, but it is
+      'transform-origin': 'top left'
     });
 }
 

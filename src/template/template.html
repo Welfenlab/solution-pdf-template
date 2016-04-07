@@ -4,9 +4,15 @@
   <link rel="stylesheet" type="text/css" href="file://{dir}/styles/pdf.css">
   <link rel="stylesheet" href="file://{dir}/styles/github.css">
   <script src="file://{dir}/scripts/highlight.pack.js"></script>
-  <script src="file://{mathjax}"></script>
+  <script src="file://{mathjax}?config=TeX-AMS-MML_HTMLorMML"></script>
   <script type="test/x-mathjax-config">
     MathJax.Hub.msieHTMLCollectionBug = true;
+  </script>
+  <script>
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+      processEscapes: true
+    });
   </script>
 </head>
 <body>
