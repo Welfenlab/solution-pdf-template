@@ -1,6 +1,6 @@
 {
   "name": "@tutor/pdf-template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The template used for PDF generation of solutions and corrected solutions.",
   "main": "./src/index.js",
   "scripts": {
